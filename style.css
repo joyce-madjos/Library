@@ -1,0 +1,49 @@
+:root {
+  --smoky-black: rgba(21, 13, 8, 1);
+  --chamoisee: rgba(158, 118, 92, 1);
+  --licorice: rgba(39, 21, 10, 1);
+  --bistre: rgba(44, 32, 25, 1);
+  --buff: rgba(203, 151, 117, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-position: center;
+  background-image: url(./images/background.jpg);
+  background-attachment: fixed;
+}
+
+#background {
+  /* position: absolute;
+    max-width: 100%; */
+  /* min-height: 100svh; */
+  /* background-image: image(); */
+}
+
+.container {
+  margin-top: 1rem;
+  border: 2px solid black;
+}
+
+.card {
+  max-width: 50%;
+  /* color: white; */
+  background-color: rgba(255, 235, 235, 1);
+  /* rgb() */
+}
+
+.card-header {
+  /* background-color: rgba(35, 227, 74, 0.7); */
+  background-color: rgba(173, 228, 219, 1);
+  /* rgb(173, 228, 219) */
+}
+
+.btn{
+ background-color: 	#6DA9E4;
+}
