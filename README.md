@@ -2,5 +2,7 @@
 
 Made using HTML, Bootstrap 5.0, Vanilla CSS & JavaScript
 
-[Background Photo](https://www.pexels.com/photo/assorted-books-on-shelf-1290141/) by Ivo Rainha from Pexels
+<a href="https://www.pexels.com/photo/assorted-books-on-shelf-1290141/" target="_blank">Background Photo</a> by Ivo Rainha from Pexels
+
+
 
