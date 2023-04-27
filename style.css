@@ -6,8 +6,9 @@
   --buff: rgba(203, 151, 117, 0.5);
   --border-color: #dba084;
   --read: rgba(0, 128, 0, 0.5);
-  --unread: rgba(255, 0, 0, 0.5);
-  --unread-circle: rgba(120, 64, 47, 0.5);
+  --unread-circle: rgba(255, 0, 0, 0.5);
+  --unread: rgba(222, 27, 27, 0.5);
+  --read-circle: rgba(17, 234, 46, 0.5);
   --wood: rgba(165, 111, 67, 0.5);
 }
 
@@ -29,7 +30,7 @@ body {
   color: white;
 }
 
-#exampleModal{
+#myModal{
   color: black;
 }
 
@@ -137,7 +138,7 @@ input, select{
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: rgba(17, 234, 46, 0.5);
+  background-color: var(--read-circle);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,6 +169,8 @@ input, select{
 .book-body {
   text-align: center;
 }
+
+
 
 .switch {
   display: inline-block;

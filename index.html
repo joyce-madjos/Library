@@ -37,7 +37,7 @@
     <div class="container">
       <div class="left">
         <h1>Library</h1>
-        <button type="button" id="new-book" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Add New Book</button>
+        <button type="button" id="new-book" data-bs-toggle="modal" data-bs-target="#myModal">+ Add New Book</button>
         <div class="title-holder">
           <a class="title" href="#">Cat</a>
           <a class="title" href="#">Cat</a>
@@ -45,17 +45,18 @@
       </div>
       <div class="right">
         <div class="card-holder">
-          <div class="card">
-            <div class="circle">
+          <div id="card" class="card">
+            <div id="circle" class="circle">
               <i class="fa-brands fa-readme fa-2xl"></i>
             </div>
             <div class="book-body">
               <p id="book-name" class="book-name">Lorem ipsum dolor</p>
               <p id="book-author" class="author">Lorem, Ipsum</p>
               <p id="book-page" class="pages">200 pages</p>
+              <p id="book-status" class="status">Read</p>
             </div>
             <label class="switch">
-              <input type="checkbox" />
+              <input id="switch"  type="checkbox" />
               <span class="slider"></span>
             </label>
           </div>
@@ -77,11 +78,11 @@
       </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">New Book</h5>
+            <h5 class="modal-title" id="myModalLabel">New Book</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -100,7 +101,7 @@
               </div>
               <div class="form-inline">
                 <label class="to-equal-p">Status</label>
-                  <select>
+                  <select id="new-status">
                     <option value="0"></option>
                     <option value="1">Read</option>
                     <option value="2">Unread</option>
@@ -109,7 +110,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" >Add Book</button>
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-primary" id="addBook" data-bs-dismiss="modal">Add Book</button>
           </div>
         </div>
       </div>
