@@ -1,6 +1,6 @@
 # Library
 
-Made using HTML, Vanilla CSS & JavaScript, and Bootstrap 5.0
+Made using HTML, Bootstrap 5.0, Vanilla CSS & JavaScript
 
-Background Photo by Ivo Rainha from Pexels: https://www.pexels.com/photo/assorted-books-on-shelf-1290141/
+[Background Photo](https://www.pexels.com/photo/assorted-books-on-shelf-1290141/) by Ivo Rainha from Pexels
 
