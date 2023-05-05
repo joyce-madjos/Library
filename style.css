@@ -19,12 +19,12 @@
   "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -67,14 +67,10 @@ button, a{
 .form-inline{
   display: flex;
   align-items: center;
-  /* border: 2px solid black; */
 }
 
 label{
   margin-right: 1rem;
-  /* margin: 0 1rem;
-  width: min(3rem, 1rem); */
-  /* max-width: 15%; */
 }
 
 .to-equal-t{
@@ -98,7 +94,6 @@ input, select{
 }
 
 .left {
-  /* color: white; */
   margin-right: 2px;
   position: sticky;
   top: 1rem;
