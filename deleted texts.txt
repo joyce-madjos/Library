@@ -1,0 +1,111 @@
+// add event listener to the add book button
+addBookButton.addEventListener("click", function () {
+
+  // create a new element for the new book
+  // let newBookCard = document.createElement("div");
+  // newBookCard.classList.add("card");
+  // let newBookTitle = document.createElement("h2");
+  // newBookTitle.classList.add("book-name");
+  // let newBookAuthor = document.createElement("h3");
+  // newBookAuthor.classList.add("book-author");
+  // let newBookPages = document.createElement("h3");
+  // newBookPages.classList.add("book-page");
+  // let newBookStatus = document.createElement("h3");
+  // newBookStatus.classList.add("book-status");
+  // let newBookSwitch = document.createElement("label");
+  // newBookSwitch.classList.add("switch");
+  // let newBookInput = document.createElement("input");
+  // newBookInput.setAttribute("type", "checkbox");
+  // newBookInput.setAttribute("id", "switch");
+  // let newBookSpan = document.createElement("span");
+  // newBookSpan.classList.add("slider");
+  // newBookSpan.classList.add("round");
+  // let newBookDelete = document.createElement("button");
+  // newBookDelete.classList.add("delete");
+  // newBookDelete.innerText = "Delete";
+
+  // // append the new book to the page
+  // newBookSwitch.appendChild(newBookInput);
+  // newBookSwitch.appendChild(newBookSpan);
+  // newBookCard.appendChild(newBookTitle);
+  // newBookCard.appendChild(newBookAuthor);
+  // newBookCard.appendChild(newBookPages);
+  // newBookCard.appendChild(newBookStatus);
+  // newBookCard.appendChild(newBookSwitch);
+  // newBookCard.appendChild(newBookDelete);
+  // document.body.appendChild(newBookCard);
+
+  // // get the values from the input fields
+  // let newAuthor = document.getElementById("new-author");  
+  // let newTitle = document.getElementById("new-title");
+  // let newPages = document.getElementById("new-pages");
+  // let newStatus = document.getElementById("new-status");
+
+  // LEGIT UNG MGA NASA BABA |
+  //                         V
+
+  // create a new book object
+  let newBook = new Book(
+    newAuthor.value,
+    newTitle.value,
+    newPages.value,
+    newStatus.value
+  );
+  // display the new book on the page
+  bookTitle.innerText = newBook.title;
+  bookAuthor.innerText = newBook.author;
+  bookPages.innerText = newBook.pages;
+  // get the status of the new book from dropdown
+  if (newStatus.value == "1") {
+    switchBtn.checked = true;
+    read();
+  } else if (newStatus.value == "2") {
+    switchBtn.checked = false;
+    unread();
+  }
+  // clear the input fields after adding a new book
+  newTitle.value = "";
+  newAuthor.value = "";
+  newPages.value = "";
+  newStatus.value = "";
+
+});
+
+// change the status of the book when the switch is clicked
+switchBtn.addEventListener("click", function () {
+  if (switchBtn.checked == true) {
+    read();
+  } else {
+    unread();
+  }
+});
+
+
+<div class="card-unread">
+            <div class="u-circle">
+              <i class="fa-solid fa-book fa-2xl"></i>
+            </div>
+            <div class="book-body">
+              <p class="book-name">Lorem ipsum dolor</p>
+              <p class="author">Lorem, Ipsum</p>
+              <p class="pages">200 pages</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+ <div id="circle" class="circle">
+              <i class="fa-brands fa-readme fa-2xl"></i>
+            </div>
+            <div class="book-body">
+              <p id="book-name" class="book-name">Lorem ipsum dolor</p>
+              <p id="book-author" class="author">Lorem, Ipsum</p>
+              <p id="book-page" class="pages">200 pages</p>
+              <p id="book-status" class="status">Read</p>
+            </div>
+            <label class="switch">
+              <input id="switch"  type="checkbox" />
+              <span class="slider"></span>
+            </label>

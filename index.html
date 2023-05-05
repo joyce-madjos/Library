@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&family=Montserrat&family=Oswald:wght@200&display=swap"
+        rel="stylesheet"
+    />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -34,52 +41,22 @@
   </head>
   <body>
   
-    <div class="container">
-      <div class="left">
+    <div id="container" class="container">
+      <div id="left-side" class="left">
         <h1>Library</h1>
         <button type="button" id="new-book" data-bs-toggle="modal" data-bs-target="#myModal">+ Add New Book</button>
-        <div class="title-holder">
-          <a class="title" href="#">Cat</a>
-          <a class="title" href="#">Cat</a>
-        </div>
+        <div id="title-holder" class="title-holder"></div>
       </div>
-      <div class="right">
-        <div class="card-holder">
-          <div id="card" class="card">
-            <div id="circle" class="circle">
-              <i class="fa-brands fa-readme fa-2xl"></i>
-            </div>
-            <div class="book-body">
-              <p id="book-name" class="book-name">Lorem ipsum dolor</p>
-              <p id="book-author" class="author">Lorem, Ipsum</p>
-              <p id="book-page" class="pages">200 pages</p>
-              <p id="book-status" class="status">Read</p>
-            </div>
-            <label class="switch">
-              <input id="switch"  type="checkbox" />
-              <span class="slider"></span>
-            </label>
-          </div>
-          <div class="card-unread">
-            <div class="u-circle">
-              <i class="fa-solid fa-book fa-2xl"></i>
-            </div>
-            <div class="book-body">
-              <p class="book-name">Lorem ipsum dolor</p>
-              <p class="author">Lorem, Ipsum</p>
-              <p class="pages">200 pages</p>
-            </div>
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider"></span>
-            </label>
-          </div>
+      <div id="right-side" class="right">
+        <div id="card" class="empty">
+         <p>Library is currently empty.</p>
         </div>
+        <div id="card-holder" class="card-holder"></div>
       </div>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="myModalLabel">New Book</h5>
@@ -102,7 +79,6 @@
               <div class="form-inline">
                 <label class="to-equal-p">Status</label>
                   <select id="new-status">
-                    <option value="0"></option>
                     <option value="1">Read</option>
                     <option value="2">Unread</option>
                   </select>
@@ -111,7 +87,7 @@
           </div>
           <div class="modal-footer">
             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-            <button type="button" class="btn btn-primary" id="addBook" data-bs-dismiss="modal">Add Book</button>
+            <button type="button" class="btn" id="addBook" data-bs-dismiss="modal">Add Book</button>
           </div>
         </div>
       </div>
