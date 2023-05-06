@@ -254,7 +254,6 @@ input:checked + .slider:before {
   .right {
     margin-top: 0;
   }
-
   .form-holder, .modal-content, .form-holder{
     max-width: 100%;
     margin: 0;
@@ -265,5 +264,11 @@ input:checked + .slider:before {
   .empty {
     padding: 3rem 1rem;
     height: 100%;
+  }
+  h1{
+    margin-top: 1rem;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
   }
 }
