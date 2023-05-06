@@ -113,6 +113,7 @@ input, select{
 }
 
 .title {
+  font-size: 1.2rem;
   text-decoration: none;
   color: white;
   padding: 1rem;

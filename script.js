@@ -1,3 +1,4 @@
+//  get the elements from html
 let bookTitle = document.getElementById("book-name");
 let bookAuthor = document.getElementById("book-author");
 let bookPages = document.getElementById("book-page");
@@ -15,6 +16,9 @@ let newPages = document.getElementById("new-pages");
 let newStatus = document.getElementById("new-status");
 let modal = document.querySelector(".modal");
 let addBookButton = document.getElementById("addBook");
+let titleHolder = document.getElementById("title-holder");
+
+// array for user's input
 var myLibrary = [];
 
 // function constructor for the Book object
@@ -23,28 +27,26 @@ function Book(author, title, pages, status) {
   this.title = title;
   this.pages = pages;
   this.status = status;
-  this.info = function () {
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.status}`;
-  };
 }
 
 // function to change the status of the book when read
-function read(card, circle, bookStatus) {
+function read(card, circle, bookStatus, circleImage) {
   bookStatus.innerText = "Read";
   card.style.backgroundColor = "rgba(0, 128, 0, 0.5)";
   circle.style.backgroundColor = "rgba(17, 234, 46, 0.5)";
+  circleImage.className = "fa-brands fa-readme fa-2xl";
 }
 
 // function to change the status of the book when unread
-function unread(card, circle, bookStatus) {
+function unread(card, circle, bookStatus, circleImage) {
   bookStatus.innerText = "Unread";
   card.style.backgroundColor = "rgba(222, 27, 27, 0.5)";
   circle.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
+  circleImage.className = "fa-solid fa-book fa-2xl";
 }
 
 // add event listener to the add book button
 addBookButton.addEventListener("click", function () {
-
   emptyCard.style.display = "none";
 
   myLibrary.push(
@@ -62,20 +64,14 @@ addBookButton.addEventListener("click", function () {
   createTitleCard(myLibrary[index].title);
 });
 
-var titleHolder = document.getElementById("title-holder");
 
+//  function to create a title card in the left side
 function createTitleCard(title) {
-
   let titleCard = document.createElement("p");
   titleCard.classList.add("title");
   titleCard.textContent = title;
-
-  // container.appendChild(leftSide);
-  // leftSide.appendChild(titleHolder);
   titleHolder.appendChild(titleCard);
-
    document.body.appendChild(container);
-  // container.appendChild(titleCard);
 }
 
 // function to create a card for the book
@@ -85,6 +81,7 @@ function createCard(title, author, page, status) {
   card.classList.add("card");
   let circle = document.createElement("div");
   circle.classList.add("circle");
+  let circleImage = document.createElement("i");
   let bookBody = document.createElement("div");
   bookBody.classList.add("book-body");
   let bookName = document.createElement("p");
@@ -107,6 +104,7 @@ function createCard(title, author, page, status) {
   rightSide.appendChild(cardHolder);
   cardHolder.appendChild(card);
   card.appendChild(circle);
+  circle.appendChild(circleImage);
   card.appendChild(bookBody);
   bookBody.appendChild(bookName);
   bookBody.appendChild(bookAuthor);
@@ -124,49 +122,21 @@ function createCard(title, author, page, status) {
   // set the status of the book
   if (status == "1") {
     switchInput.checked = true;
-    read(card, circle, bookStatus);
+    read(card, circle, bookStatus, circleImage);
   } else if (status == "2") {
     switchInput.checked = false;
-    unread(card, circle, bookStatus);
+    unread(card, circle, bookStatus, circleImage);
   }
 
+  // add event listener to the switch button of every card
   switchInput.addEventListener("click", function () {
     if (switchInput.checked == true) {
-      read(card, circle, bookStatus);
+      read(card, circle, bookStatus, circleImage);
     } else {
-      unread(card, circle, bookStatus);
+      unread(card, circle, bookStatus, circleImage);
     }
   });
 
   // append the card to the document body
   document.body.appendChild(container);
 }
-
-
-
-
-// ------------------------------
-
-// An array of several books
-// let books = [
-//   new Book("J.K. Rowling", "Harry Potter", 400, "not read"),
-//   new Book("J.R.R. Tolkien", "Lord of the Rings", 700, "read"),
-//   new Book("George R.R. Martin", "A Song of Ice and Fire", 1000, "not read"),
-//   new Book("Stephen King", "The Shining", 500, "read"),
-//   new Book("J.R.R. Tolkien", "The Hobbit", 300, "read"),
-//   new Book("J.K. Rowling", "Harry Potter and the Chamber of Secrets", 500, "not read"),
-//   new Book("J.K. Rowling", "Harry Potter and the Prisoner of Azkaban", 600, "read"),
-// ];
-
-// Display the books on the page using console.log
-// books.forEach(book => console.log(book.info()));
-
-// let bookOne = new Book("J.K. Rowling", "Harry Potter", 400, "Read");
-// bookTitle.innerText = bookOne.title;
-// bookAuthor.innerText = bookOne.author;
-// bookPages.innerText = bookOne.pages;
-// bookStatus.innerText = bookOne.status;
-
-// if (bookOne.status === "Read") {
-//   switchBtn.checked = true;
-// }

@@ -109,3 +109,32 @@ switchBtn.addEventListener("click", function () {
               <input id="switch"  type="checkbox" />
               <span class="slider"></span>
             </label>
+
+            
+
+
+// ------------------------------
+
+// An array of several books
+// let books = [
+//   new Book("J.K. Rowling", "Harry Potter", 400, "not read"),
+//   new Book("J.R.R. Tolkien", "Lord of the Rings", 700, "read"),
+//   new Book("George R.R. Martin", "A Song of Ice and Fire", 1000, "not read"),
+//   new Book("Stephen King", "The Shining", 500, "read"),
+//   new Book("J.R.R. Tolkien", "The Hobbit", 300, "read"),
+//   new Book("J.K. Rowling", "Harry Potter and the Chamber of Secrets", 500, "not read"),
+//   new Book("J.K. Rowling", "Harry Potter and the Prisoner of Azkaban", 600, "read"),
+// ];
+
+// Display the books on the page using console.log
+// books.forEach(book => console.log(book.info()));
+
+// let bookOne = new Book("J.K. Rowling", "Harry Potter", 400, "Read");
+// bookTitle.innerText = bookOne.title;
+// bookAuthor.innerText = bookOne.author;
+// bookPages.innerText = bookOne.pages;
+// bookStatus.innerText = bookOne.status;
+
+// if (bookOne.status === "Read") {
+//   switchBtn.checked = true;
+// }
